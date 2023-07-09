@@ -31,7 +31,7 @@ router.route('/').post(async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).send(err?.response.data.error.message);
+    res.status(409).send(err?.response.data.error.message);
   }
 });
 export default router;
